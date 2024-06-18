@@ -8,8 +8,10 @@ import SectionDivider from "@/components/section-divider";
 import { cn } from "@/utils/cn";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
+
 export default function Home() {
   return (
+    
     <TracingBeam className="px-6">
     <main className="flex flex-col items-center antialiased px-4">
       <div className="w-full absolute">

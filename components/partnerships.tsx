@@ -4,6 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { PinContainer } from "@/components/ui/3d-pin";
+import { LinkPreview } from "@/components/ui/link-preview";
 
 export default function Projects() {
   const { ref } = useSectionInView("Partnerships");
@@ -12,6 +13,7 @@ export default function Projects() {
     <section ref={ref} id="partnerships" className="scroll-mt-28 mb-28">
       <SectionHeading>Our Partners</SectionHeading>
       <div className="h-[40rem] w-full flex items-center justify-center ">
+      
         <PinContainer
           title="hackclub.com"
           href="https://hackclub.com/"
@@ -24,7 +26,7 @@ export default function Projects() {
               <span className="text-slate-500 ">
                 Hack Club is a global nonprofit network of high school coding
                 clubs. It aims to empower students to become makers and leaders
-                through coding, entrepreneurship, and creativity.
+                through coding, entrepreneurship, and creativity.GIIS Tech Club (Global Indian International School) is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
               </span>
             </div>
             <Image
@@ -41,6 +43,7 @@ export default function Projects() {
               </li>
             </ul>
         </PinContainer>
+        
       </div>
     </section>
   );

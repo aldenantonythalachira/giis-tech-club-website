@@ -10,7 +10,6 @@ import { useRef, useState } from "react";
 import Image from 'next/image'
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -21,6 +20,9 @@ import {
 } from "@/components/ui/carousel";
 
 export default function About() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false })
+  )
   const { ref } = useSectionInView("Gallery");
   const items = [
     { imageUrl: "/web_dev2.jpg", description: "Web Development Workshop"},
@@ -28,7 +30,10 @@ export default function About() {
     { imageUrl: "/app_dev1.jpg", description: "App Development Workshop"},
     { imageUrl: "/app_dev2.jpg", description: "App Development Workshop"},
     { imageUrl: "/game_dev1.jpg", description: "Game Development Workshop"},
-    { imageUrl: "/game_dev2.jpg", description: "Game Development Workshop"}
+    { imageUrl: "/game_dev2.jpg", description: "Game Development Workshop"},
+    { imageUrl: "/robotics_ai3.jpg", description: "Robotics and AI Workshop"},
+    {imageUrl: "/robotics_ai2.jpg", description: "Robotics and AI Workshop"},
+    { imageUrl: "/robotics_ai1.jpg", description: "Robotics and AI Workshop"},
   ];
   return (
     <motion.section
@@ -41,7 +46,12 @@ export default function About() {
     >
       <SectionHeading>Gallery</SectionHeading>
       <div className="h-[40rem] w-full flex items-center justify-center ">
-      <Carousel className="w-full max-w-sm">
+      <Carousel
+      plugins={[plugin.current]}
+      className="w-full max-w-sm"
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+    >
       <CarouselContent>
       {items.map((item, index) => (
               <CarouselItem key={index}>
@@ -53,8 +63,6 @@ export default function About() {
               </CarouselItem>
             ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
     </div>
     </motion.section>

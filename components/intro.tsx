@@ -61,6 +61,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
+        
         <a href="https://www.instagram.com/giistechclub/" target="_blank">
           <Button
             style={{ borderRadius: "1.75rem", width: "60px", height: "60px" }} // Increased width and height
@@ -70,6 +71,16 @@ export default function Intro() {
             {/* Increased the font size of the Instagram icon */}
           </Button>
         </a>
+
+        <Link href="https://giishackathonx.com">
+          <Button
+            style={{ borderRadius: "1.75rem", width: "200px", height: "60px" }} // Increased width and height
+            className="bg-[#AED6F1] flex items-center justify-center text-gray-700 hover:text-gray-950 rounded-lg focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          >
+            {"GIIS Hackathon 2024"}
+          </Button>
+          </Link>
+
       </motion.div>
     </section>
   );
