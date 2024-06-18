@@ -25,12 +25,12 @@ export default function About() {
   )
   const { ref } = useSectionInView("Gallery");
   const items = [
-    { imageUrl: "/web_dev2.jpg", description: "Web Development Workshop"},
-    {imageUrl: "/web_dev1.jpg", description: "Web Development Workshop"},
-    { imageUrl: "/app_dev1.jpg", description: "App Development Workshop"},
-    { imageUrl: "/app_dev2.jpg", description: "App Development Workshop"},
+    { imageUrl: "/web_dev2.JPG", description: "Web Development Workshop"},
+    {imageUrl: "/web_dev1.JPG", description: "Web Development Workshop"},
+    { imageUrl: "/app_dev1.JPG", description: "App Development Workshop"},
+    { imageUrl: "/app_dev2.JPG", description: "App Development Workshop"},
     { imageUrl: "/game_dev1.jpg", description: "Game Development Workshop"},
-    { imageUrl: "/game_dev2.jpg", description: "Game Development Workshop"},
+    { imageUrl: "/game_dev2.JPG", description: "Game Development Workshop"},
     { imageUrl: "/robotics_ai3.jpg", description: "Robotics and AI Workshop"},
     {imageUrl: "/robotics_ai2.jpg", description: "Robotics and AI Workshop"},
     { imageUrl: "/robotics_ai1.jpg", description: "Robotics and AI Workshop"},
