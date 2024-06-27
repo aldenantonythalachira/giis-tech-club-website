@@ -72,7 +72,7 @@ export default function Intro() {
           </Button>
         </a>
 
-        <Link href="https://giishackathonx.com">
+        <Link href="https://giis-hackathon-page-2024.vercel.app/">
           <Button
             style={{ borderRadius: "1.75rem", width: "200px", height: "60px" }} // Increased width and height
             className="bg-[#AED6F1] flex items-center justify-center text-gray-700 hover:text-gray-950 rounded-lg focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
